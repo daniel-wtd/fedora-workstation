@@ -12,7 +12,7 @@ wtd_ws_flatpak_repositories:
     method: "system"
 
   - name: "flathub-beta"
-    state: "present"
+    state: "absent"
     url: "https://flathub.org/beta-repo/flathub-beta.flatpakrepo"
     method: "system"
 
@@ -24,11 +24,6 @@ wtd_ws_flatpak_repositories:
   - name: "fedora-testing"
     state: "absent"
     url: "oci+https://registry.fedoraproject.org#testing"
-    method: "system"
-
-  - name: "gnome-sdk"
-    state: "absent"
-    url: "https://sdk.gnome.org/gnome-apps.flatpakrepo"
     method: "system"
 
 ## Package Management

@@ -1,2 +1,19 @@
 ---
 # tasks file for gnome_desktop
+
+- name: "Manage dependencies"
+  package:
+    name: "python-psutil"
+    state: "present"
+  become: true
+  tags:
+    - "gnome"
+    - "package"
+    - "dependency"
+
+- name: "Include desktop tasks"
+  include_tasks: "gnome-desktop.yml"
+  tags:
+    - "gnome"
+    - "desktop"
+    - "configuration"
