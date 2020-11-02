@@ -1,2 +1,16 @@
 ---
 # tasks file for misc
+
+- name: "Include hostname"
+  include_tasks: "hostname.yml"
+  tags:
+    - "misc"
+    - "hostname"
+    - "configuration"
+
+- name: "Include timezone"
+  include_tasks: "timezone.yml"
+  tags:
+    - "misc"
+    - "timezone"
+    - "configuration"

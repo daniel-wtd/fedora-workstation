@@ -15,7 +15,6 @@
   include_tasks: "shell.yml"
   tags:
     - "gnome"
-    - "configuration"
     - "shell"
     - "package"
 
