@@ -1,0 +1,22 @@
+- name: "Manage Developement Package"
+  package:
+    name: "{{ wtd_ws_development_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_development_packages"
+  tags:
+    - "package"
+    - "development"
+
+- name: "Manage Development Flatpak"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_development_flatpaks }}"
+  when:
+    - "wtd_ws_development_flatpaks"
+  tags:
+    - "flatpak"
+    - "development"

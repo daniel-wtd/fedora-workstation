@@ -1,0 +1,12 @@
+---
+# handlers file for podman
+
+- name: "Restart podman Service"
+  service:
+    name: "{{ wtd_podman_service_name }}"
+    state: "restarted"
+  become: true
+  tags:
+    - "podman"
+    - "package"
+    - "service"

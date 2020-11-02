@@ -1,0 +1,8 @@
+---
+# tasks file for virt_guest
+
+- name: "Manage Virt Guest Package"
+  package:
+    name: "{{ wtd_vg_package_name }}"
+    state: "{{ wtd_vg_package_state }}"
+  become: true

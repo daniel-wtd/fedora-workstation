@@ -1,0 +1,45 @@
+---
+- name: "Ensure dconf profile directory"
+  file:
+    path: "/etc/dconf/profile/"
+    state: "directory"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  notify:
+    - "Update dconf"
+  
+- name: "Configure gdm Profile"
+  template:
+    src: "gdm.j2"
+    dest: "/etc/dconf/profile/gdm"
+    owner: "root"
+    group: "root"
+    mode: 0644
+  become: true
+  notify:
+    - "Update dconf"
+
+- name: "Ensure gdm database Directory"
+  file:
+    path: "/etc/dconf/db/gdm.d/"
+    state: "directory"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  notify:
+    - "Update dconf"
+
+- name: "Configure Banner Message"
+  template:
+    src: "01-banner-message.j2"
+    dest: "/etc/dconf/db/gdm.d/01-banner-message"
+    owner: "root"
+    group: "root"
+    state: "present"
+    mode: 0644
+  become: true
+  notify:
+    - "Update dconf"

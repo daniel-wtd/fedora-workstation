@@ -1,0 +1,12 @@
+---
+# handlers file for tuned
+
+- name: "Restart tuned Service"
+  service:
+    name: "{{ wtd_tuned_service_name }}"
+    state: "restarted"
+  become: true
+  tags:
+    - "tuned"
+    - "package"
+    - "service"

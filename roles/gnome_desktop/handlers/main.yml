@@ -1,0 +1,7 @@
+---
+# handlers file for gnome_desktop
+
+- name: "Update dconf"
+  command:
+    cmd: "dconf update"
+  become: true

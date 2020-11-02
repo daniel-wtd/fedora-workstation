@@ -1,0 +1,4 @@
+---
+all:
+  hosts:
+    fedora33-ws.vm.laplab:

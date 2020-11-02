@@ -1,0 +1,22 @@
+- name: "Manage utilities Packages"
+  package:
+    name: "{{ wtd_ws_utilities_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_utilities_packages"
+  tags:
+    - "utilities"
+    - "package"
+
+- name: "Manage utilities Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_utilities_flatpaks }}"
+  when:
+    - "wtd_ws_utilities_flatpaks"
+  tags:
+    - "utilities"
+    - "flatpak"

@@ -1,0 +1,9 @@
+---
+
+- name: "Set hostname"
+  hostname:
+    name: "{{ wtd_misc_hostname }}"
+  become: true
+  tags:
+    - "hostname"
+    - "misc"

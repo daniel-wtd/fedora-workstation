@@ -1,0 +1,25 @@
+---
+# handlers file for kvm
+
+- name: "Restart kvm Service"
+  service:
+    name: "{{ wtd_kvm_service_name }}"
+    state: "restarted"
+  become: true
+  tags:
+    - "kvm"
+    - "libvirt"
+    - "service"
+    - "package"
+    
+- name: "Reboot System"
+  reboot:
+    reboot_timeout: 3600
+  become: true
+  when:
+    - "wtd_kvm_system_reboot != 'never'"
+  tags:
+    - "kvm"
+    - "libvirt"
+    - "package"
+    - "system"

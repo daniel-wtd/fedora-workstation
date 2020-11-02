@@ -1,0 +1,22 @@
+- name: "Manage gaming Packages"
+  package:
+    name: "{{ wtd_ws_gaming_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_gaming_packages"
+  tags:
+    - "gaming"
+    - "package"
+
+- name: "Manage gaming Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_gaming_flatpaks }}"
+  when:
+    - "wtd_ws_gaming_flatpaks"
+  tags:
+    - "gaming"
+    - "flatpak"

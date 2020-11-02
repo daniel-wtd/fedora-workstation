@@ -1,0 +1,75 @@
+# desktop
+
+- name: "Set Background"
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "file:///usr/share/backgrounds/gnome/adwaita-timed.xml"
+    state: "present"
+
+- name: "Calendar - Show Weekdate"
+  dconf:
+    key: "/org/gnome/desktop/calendar/show-weekdate"
+    value: "true"
+    state: "present"
+
+- name: "Clock - Show Date"
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-date"
+    value: "true"
+    state: "present"
+
+- name: "Clock - Show Seconds"
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-seconds"
+    value: "true"
+    state: "present"
+    
+- name: "Clock - Show Weekday"
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-weekday"
+    value: "true"
+    state: "present"
+    
+- name: "Show Battery Percentage"
+  dconf:
+    key: "/org/gnome/desktop/interface/show-battery-percentage"
+    value: "true"
+    state: "present"
+
+- name: "Window Buttons"
+  dconf:
+    key: "/org/gnome/desktop/wm/preferences/button-layout"
+    value: "appmenu:minimize,maximize,close"
+    state: "present"
+
+# power
+
+- name: "Power - Button Action"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/power-button-action"
+    value: "suspend"
+    state: "present"
+
+- name: "Power - Sleep AC"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
+    value: "nothing"
+    state: "present"
+
+- name: "Power - Sleep AC Timeout"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-timeout"
+    value: "1.800"
+    state: "present"
+
+- name: "Power - Sleep Battery"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-battery-type"
+    value: "suspend"
+    state: "present"
+
+- name: "Power - Sleep Battery Timeout"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-attery-timeout"
+    value: "900"
+    state: "present"

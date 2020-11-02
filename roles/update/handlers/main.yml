@@ -1,0 +1,14 @@
+---
+# handlers file for update
+
+- name: "Reboot System"
+  reboot:
+    reboot_timeout: "3600"
+  become: true
+  when:
+    - "wtd_update_reboot"
+  tags:
+    - "update"
+    - "package"
+    - "system"
+    - "reboot"

@@ -1,0 +1,62 @@
+---
+# tasks file for gnome_desktop
+
+- name: "Include repository Tasks"
+  include_tasks: "repository.yml"
+  tags:
+    - "gnome"
+    - "repository"
+
+- name: "Include removal Tasks"
+  include_tasks: "removal.yml"
+  tags:
+    - "gnome"
+    - "removal"
+
+- name: "Include cloud Tasks"
+  include_tasks: "cloud.yml"
+  tags:
+    - "gnome"
+    - "cloud"
+
+- name: "Include communication Tasks"
+  include_tasks: "communication.yml"
+  tags:
+    - "gnome"
+    - "communication"
+
+- name: "Include development Tasks"
+  include_tasks: "development.yml"
+  tags:
+    - "gnome"
+    - "development"
+
+- name: "Include gaming Tasks"
+  include_tasks: "gaming.yml"
+  tags:
+    - "gnome"
+    - "gaming"
+  
+- name: "Include multimedia Tasks"
+  include_tasks: "multimedia.yml"
+  tags:
+    - "gnome"
+    - "multimedia"
+  
+- name: "Include productivity Tasks"
+  include_tasks: "productivity.yml"
+  tags:
+    - "gnome"
+    - "productivity"
+  
+- name: "Include system Tasks"
+  include_tasks: "system.yml"
+  tags:
+    - "gnome"
+    - "system"
+  
+- name: "Include utilities Tasks"
+  include_tasks: "utilities.yml"
+  tags:
+    - "gnome"
+    - "utilities"

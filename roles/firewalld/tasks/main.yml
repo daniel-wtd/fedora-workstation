@@ -1,0 +1,21 @@
+---
+# tasks file for firewalld
+
+- name: "Manage firewalld Package"
+  package:
+    name: "{{ wtd_firewalld_package_name }}"
+    state: "{{ wtd_firewalld_package_state }}"
+  become: true
+  tags:
+    - "firewalld"
+    - "package"
+
+- name: "Manage firewalld Service"
+  service:
+    name: "{{ wtd_firewalld_service_name }}"
+    state: "{{ wtd_firewalld_service_state }}"
+    enabled: "{{ wtd_firewalld_service_enabled }}"
+  become: true
+  tags:
+    - "firewalld"
+    - "service"

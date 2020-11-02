@@ -1,0 +1,17 @@
+---
+# defaults file for podman
+
+## Package Management
+
+wtd_podman_package_name: "podman"
+wtd_podman_package_state: "present"
+
+## Configuration Management
+
+wtd_podman_configuration_network: true
+
+## Service Management
+
+wtd_podman_service_name: "podman.socket"
+wtd_podman_service_state: "started"
+wtd_podman_service_enabled: true

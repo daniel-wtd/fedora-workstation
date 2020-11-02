@@ -1,0 +1,9 @@
+---
+
+- name: "Set timezone"
+  community.general.timezone:
+    name: "{{ wtd_misc_timezone }}"
+  become: true
+  tags:
+    - "misc"
+    - "timezone"

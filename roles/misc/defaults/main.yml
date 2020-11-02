@@ -1,0 +1,5 @@
+---
+# defaults file for misc
+
+wtd_misc_hostname: "{{ inventory_hostname }}"
+wtd_misc_timezone: "UTC"

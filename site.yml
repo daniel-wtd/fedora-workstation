@@ -1,0 +1,15 @@
+---
+
+- name: "Deploy Gnome Desktop"
+  hosts: "all"
+
+  roles:
+
+    - role: "update"
+    - role: "chrony"
+    - role: "tuned"
+    - role: "podman"
+    - role: "kvm"
+    - role: "firewalld"
+    - role: "gnome_desktop"
+    - role: "gnome_applications"

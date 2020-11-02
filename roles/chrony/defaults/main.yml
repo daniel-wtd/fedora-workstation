@@ -1,0 +1,17 @@
+---
+# defaults file for chronyd
+
+## Package Management
+
+wtd_chrony_package_name: "chrony"
+wtd_chrony_package_state: "present"
+
+## Configuration Management
+
+## Service Management
+
+wtd_chrony_service_name: "chronyd.service"
+wtd_chrony_service_state: "started"
+wtd_chrony_service_enabled: "true"
+
+## Firewall Management

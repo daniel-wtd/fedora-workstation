@@ -1,0 +1,32 @@
+---
+# defaults file for kvm
+
+## Package Management
+
+wtd_kvm_package_name:
+  - "qemu-kvm"
+  - "virt-install"
+  - "virt-top"
+wtd_kvm_package_state: "present"
+
+## Configuration Management
+
+# Enable nested Virtualization: (true|false)
+wtd_kvm_configuration_nested_enabled: "true"
+# CPU Type: (intel|amd)
+wtd_kvm_configuration_nested_variant: "intel"
+# Configuration Path
+wtd_kvm_configuration_nested_path: "/etc/modprobe.d/kvm.conf"
+
+## Service Management
+
+wtd_kvm_service_name: "chronyd.service"
+wtd_kvm_service_state: "started"
+wtd_kvm_service_enabled: "true"
+
+## Firewall Management
+
+## System Management
+
+# Reboot: [auto|never|always]
+wtd_kvm_system_reboot: "auto"

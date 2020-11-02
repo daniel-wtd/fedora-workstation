@@ -1,0 +1,25 @@
+# keybindings
+
+- name: "Switch Applications"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-applications"
+    value: "['<Super>Tab']"
+    state: "present"
+
+- name: "Switch Applications Backward"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-applications-backward"
+    value: "['<Shift><Super>Tab']"
+    state: "present"
+
+- name: "Switch Windows"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-windows"
+    value: "['<Alt>Tab']"
+    state: "present"
+
+- name: "Switch Windows Backward"
+  dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-windows-backward"
+    value: "['<Shift><Alt>Tab']"
+    state: "present"

@@ -1,0 +1,17 @@
+---
+# defaults file for tuned
+
+## Package Management
+
+wtd_tuned_package_name: "tuned"
+wtd_tuned_package_state: "present"
+
+## Configuration Management
+
+wtd_tuned_configuration_profile: ""
+
+## Service Management
+
+wtd_tuned_service_name: "tuned.service"
+wtd_tuned_service_state: "started"
+wtd_tuned_service_enabled: true

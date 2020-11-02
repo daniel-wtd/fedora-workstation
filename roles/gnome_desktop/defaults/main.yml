@@ -1,0 +1,5 @@
+---
+# defaults file for gnome_desktop
+
+wtd_gd_gnome_classic_package_name: "gnome-classic-session"
+wtd_gd_gnome_classic_package_state: "absent"

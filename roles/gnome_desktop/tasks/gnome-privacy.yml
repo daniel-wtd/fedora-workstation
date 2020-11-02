@@ -1,0 +1,13 @@
+# privacy
+
+- name: "Remove old Temp Files"
+  dconf:
+    key: "/org/gnome/desktop/privacy/remove-old-temp-files"
+    value: "true"
+    state: "present"
+    
+- name: "Remove old Trash Files"
+  dconf:
+    key: "/org/gnome/desktop/privacy/remove-old-trash-files"
+    value: "true"
+    state: "present"

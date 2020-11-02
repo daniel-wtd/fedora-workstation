@@ -1,0 +1,21 @@
+---
+# tasks file for podman
+
+- name: "Manage podman Package"
+  package:
+    name: "{{ wtd_podman_package_name }}"
+    state: "{{ wtd_podman_package_state }}"
+  become: true
+  tags:
+    - "podman"
+    - "package"
+
+- name: "Manage podman Service"
+  service:
+    name: "{{ wtd_podman_service_name }}"
+    state: "{{ wtd_podman_service_state }}"
+    enabled: "{{ wtd_podman_service_enabled }}"
+  become: true
+  tags:
+    - "podman"
+    - "service"

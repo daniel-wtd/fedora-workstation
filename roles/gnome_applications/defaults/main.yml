@@ -1,0 +1,205 @@
+---
+# defaults file for gnome_desktop
+
+## Repository Management
+
+wtd_ws_repository_rpmfusion: "absent"
+
+wtd_ws_flatpak_repositories:
+  - name: "flathub"
+    state: "present"
+    url: "https://dl.flathub.org/repo/flathub.flatpakrepo"
+    method: "system"
+
+  - name: "flathub-beta"
+    state: "present"
+    url: "https://flathub.org/beta-repo/flathub-beta.flatpakrepo"
+    method: "system"
+
+  - name: "fedora"
+    state: "absent"
+    url: "oci+https://registry.fedoraproject.org"
+    method: "system"
+
+  - name: "fedora-testing"
+    state: "absent"
+    url: "oci+https://registry.fedoraproject.org#testing"
+    method: "system"
+
+  - name: "gnome-sdk"
+    state: "absent"
+    url: "https://sdk.gnome.org/gnome-apps.flatpakrepo"
+    method: "system"
+
+## Package Management
+
+### Removals
+
+wtd_ws_removal_packages:
+  - "abrt"
+  - "baobab"
+  - "cheese"
+  - "eog"
+  - "file-roller"
+  - "file-roller-nautilus"
+  - "firefox"
+  - "gnome-boxes"
+  - "gnome-calculator"
+  - "gnome-calendar"
+  - "gnome-characters"
+  - "gnome-clocks"
+  - "gnome-color-viewer"
+  - "gnome-contacts"
+  - "gnome-font-viewer"
+  - "gnome-logs"
+  - "gnome-maps"
+  - "gnome-photos"
+  - "gnome-terminal"
+  - "gnome-terminal-nautilus"
+  - "gnome-weather"
+  - "libreoffice-calc"
+  - "libreoffice-impress"
+  - "libreoffice-writer"
+  - "rhythmbox"
+  - "totem"
+
+wtd_ws_removal_flatpaks: []
+
+### Cloud
+
+wtd_ws_cloud_packages:
+  - "nextcloud-client"
+  - "nextcloud-client-nautilus"
+
+wtd_ws_cloud_flatpaks:
+  - "org.mozilla.firefox"
+  
+### Communication
+
+wtd_ws_communication_packages: []
+
+wtd_ws_communication_flatpaks:
+  - "org.gabmus.giara"
+  - "org.gabmus.gfeeds"
+  - "org.gnome.Polari"
+  - "uk.co.ibboard.cawbird"
+
+### Development
+
+wtd_ws_development_packages: []
+
+wtd_ws_development_flatpaks:
+  - "com.vscodium.codium"
+  - "io.atom.Atom"
+  - "net.bartkessels.getit"
+  - "org.gnome.gitg"
+  # - "org.small_tech.Gnomit"
+  # - "uk.co.mrbenshef.Boop-GTK"
+
+### Games
+
+wtd_ws_gaming_packages: []
+
+wtd_ws_gaming_flatpaks:
+  - "com.mojang.Minecraft"
+  - "com.shatteredpixel.shatteredpixeldungeon"
+  - "com.valvesoftware.Steam"
+#  - "com.albiononline.AlbionOnline"
+#  - "com.github.Anuken.Mindustry"
+
+### Multimedia
+
+wtd_ws_multimedia_packages: []
+
+wtd_ws_multimedia_flatpaks:
+  - "de.haeckerfelix.Shortwave"
+  - "org.gimp.GIMP"
+  - "org.gnome.Lollypop"
+  - "org.gnome.Shotwell"
+  - "org.gnome.Totem"
+  # - "com.belmoussaoui.Obfuscate"
+  # - "com.github.maoschanz.drawing"
+  # - "com.github.taiko2k.avvie"
+  # - "com.github.unrud.VideoDownloader"
+  # - "org.gnome.Podcasts"
+  # - "org.gnome.gitlab.YaLTeR.Identity"
+  # - "org.gnome.gitlab.YaLTeR.VideoTrimmer"
+
+### Productivity
+
+# Taste: [private|enterprise]
+wtd_ws_productivity_taste: "private"
+
+wtd_ws_productivity_private_packages: []
+
+wtd_ws_productivity_private_flatpaks:
+  - "com.jgraph.drawio.desktop"
+  - "org.gnome.Calculator"
+  - "org.gnome.Calendar"
+  - "org.gnome.Contacts"
+  - "org.gnome.Documents"
+  - "org.gnome.Geary"
+  - "org.gnome.Notes"
+  - "org.gnome.Todo"
+  - "org.libreoffice.LibreOffice"
+
+wtd_ws_productivity_enterprise_packages: []
+
+wtd_ws_productivity_enterprise_flatpaks:
+  - "com.microsoft.Teams"
+  - "com.jgraph.drawio.desktop"
+  - "org.gnome.Calculator"
+  - "org.gnome.Documents"
+  - "org.gnome.Evolution"
+  - "org.libreoffice.LibreOffice"
+
+### Security
+
+wtd_ws_security_packages: []
+
+wtd_ws_security_flatpaks:
+  - "org.gnome.PasswordSafe"
+  # - "org.gnome.seahorse.Application"
+
+### System
+
+wtd_ws_system_packages:
+  - "solaar"
+  - "libratbag-ratbagd"
+
+wtd_ws_system_flatpaks:
+  - "com.github.tchx84.Flatseal"
+  - "org.freedesktop.Piper"
+  # - "com.leinardi.gst"
+  # - "org.gnome.baobab"
+
+### Utilities
+
+wtd_ws_utilities_packages:
+  - "tilix"
+  - "tilix-nautilus"
+
+wtd_ws_utilities_flatpaks:
+  - "com.github.gi_lom.dialect"
+  - "com.github.fabiocolacio.marker"
+  - "com.rafaelmardojai.Blanket"
+  - "de.haeckerfelix.Fragments"
+  - "org.gnome.Characters"
+  - "org.gnome.Cheese"
+  - "org.gnome.ColorViewer"
+  - "org.gnome.DejaDup"
+  - "org.gnome.Evince"
+  - "org.gnome.Extensions"
+  - "org.gnome.FileRoller"
+  - "org.gnome.Firmware"
+  - "org.gnome.FontManager"
+  - "org.gnome.Maps"
+  - "org.gnome.SoundRecorder"
+  - "org.gnome.Weather"
+  - "org.gnome.clocks"
+  - "org.gnome.eog"
+  - "org.gnome.gedit"
+  - "org.gustavoperedo.FontDownloader"
+  # - "org.cvfosammmm.Setzer"
+  # - "org.gabmus.whatip"
+  # - "org.gnome.Logs"

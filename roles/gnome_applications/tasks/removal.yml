@@ -1,0 +1,22 @@
+- name: "Manage removal Packages"
+  package:
+    name: "{{ wtd_ws_removal_packages }}"
+    state: "absent"
+  become: true
+  when:
+    - "wtd_ws_removal_packages"
+  tags:
+    - "productivity"
+    - "package"
+
+- name: "Manage removal Flatpaks"
+  package:
+    name: "{{ item }}"
+    state: "absent"
+  become: true
+  loop: "{{ wtd_ws_removal_flatpaks }}"
+  when:
+    - "wtd_ws_removal_flatpaks != ''"
+  tags:
+    - "productivity"
+    - "flatpak"

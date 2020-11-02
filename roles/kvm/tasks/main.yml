@@ -1,0 +1,43 @@
+---
+# tasks file for kvm
+
+## Pakacke Management
+
+- name: "Manage kvm Package"
+  package:
+    name: "{{ wtd_kvm_package_name }}"
+    state: "{{ wtd_kvm_package_state }}"
+  become: true
+  tags:
+    - "kvm"
+    - "libvirt"
+    - "package"
+
+## Configuration Management
+
+- name: "Manage kvm-nested Configuration"
+  template:
+    src: "kvm.conf.j2"
+    dest: "{{ wtd_kvm_configuration_nested_path }}"
+    owner: "root"
+    group: "root"
+    mode: 0644
+  become: true
+  notify:
+    - "Reboot System"
+  tags:
+    - "kvm"
+    - "libvirt"
+    - "modules"
+
+## Service Management    
+- name: "Manage kvm Service"
+  service:
+    name: "{{ wtd_kvm_service_name }}"
+    state: "{{ wtd_kvm_service_state }}"
+    enabled: "{{ wtd_kvm_service_enabled }}"
+  become: true
+  tags:
+    - "kvm"
+    - "libvirt"
+    - "package"

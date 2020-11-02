@@ -1,0 +1,22 @@
+- name: "Manage Communication Packages"
+  package:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  when:
+    - "{{ wtd_ws_communication_packages }}"
+  tags:
+    - "communication"
+    - "package"
+
+- name: "Manage Communication Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_communication_flatpaks }}"
+  when:
+    - "wtd_ws_communication_flatpaks"
+  tags:
+    - "communication"
+    - "flatpak"

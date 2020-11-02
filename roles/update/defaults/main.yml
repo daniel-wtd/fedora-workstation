@@ -1,0 +1,8 @@
+---
+# defaults file for update
+
+# Package Names: [*|<list>]
+wtd_update_package_name: "*"
+
+# Reboot: [true|false]
+wtd_update_reboot: true

@@ -1,0 +1,12 @@
+---
+# handlers file for chronyd
+
+- name: "Restart chrony Service"
+  service:
+    name: "{{ wtd_chrony_service_name }}"
+    state: "restarted"
+  become: true
+  tags:
+    - "chrony"
+    - "package"
+    - "service"

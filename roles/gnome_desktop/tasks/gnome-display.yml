@@ -1,0 +1,13 @@
+# display
+
+- name: "Nightlight"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "true"
+    state: "present"
+
+- name: "Nightlight Auto Schedule"
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic"
+    value: "true"
+    state: "present"

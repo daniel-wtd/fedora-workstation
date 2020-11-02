@@ -1,0 +1,22 @@
+- name: "Manage cloud Packages"
+  package:
+    name: "{{ wtd_ws_cloud_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_cloud_packages"
+  tags:
+    - "cloud"
+    - "package"
+
+- name: "Manage cloud Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_cloud_flatpaks }}"
+  when:
+    - "wtd_ws_cloud_flatpaks"
+  tags:
+    - "cloud"
+    - "flatpak"

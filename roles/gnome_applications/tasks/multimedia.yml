@@ -1,0 +1,22 @@
+- name: "Manage multimedia Packages"
+  package:
+    name: "{{ wtd_ws_multimedia_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_multimedia_packages"
+  tags:
+    - "multimedia"
+    - "package"
+
+- name: "Manage multimedia Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_multimedia_flatpaks }}"
+  when:
+    - "wtd_ws_multimedia_flatpaks"
+  tags:
+    - "multimedia"
+    - "flatpak"

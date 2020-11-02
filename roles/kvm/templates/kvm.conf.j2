@@ -1,0 +1,14 @@
+{{ ansible_managed | comment }}
+
+{% if wtd_kvm_configuration_nested_enabled %}
+{% if wtd_kvm_configuration_nested_variant == 'intel' %}
+options kvm_intel nested=1
+#options kvm_amd nested=1
+{% elif wtd_kvm_configuration_nested_variant == 'amd' %}
+#options kvm_intel nested=1
+options kvm_amd nested=1
+{% endif %}
+{% else %}
+#options kvm_intel nested=1
+#options kvm_amd nested=1
+{% endif %}

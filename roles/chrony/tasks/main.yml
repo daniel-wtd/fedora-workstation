@@ -1,0 +1,21 @@
+---
+# tasks file for chronyd
+
+- name: "Manage chrony Package"
+  package:
+    name: "{{ wtd_chrony_package_name }}"
+    state: "{{ wtd_chrony_package_state }}"
+  become: true
+  tags:
+    - "chrony"
+    - "package"
+
+- name: "Manage chrony Service"
+  service:
+    name: "{{ wtd_chrony_service_name }}"
+    state: "{{ wtd_chrony_service_state }}"
+    enabled: "{{ wtd_chrony_service_enabled }}"
+  become: true
+  tags:
+    - "chrony"
+    - "service"

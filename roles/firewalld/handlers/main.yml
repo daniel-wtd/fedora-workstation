@@ -1,0 +1,12 @@
+---
+# handlers file for firewalld
+
+- name: "Restart firewalldd Service"
+  service:
+    name: "{{ wtd_firewalld_service_name }}"
+    state: "restarted"
+  become: true
+  tags:
+    - "firewalld"
+    - "package"
+    - "service"

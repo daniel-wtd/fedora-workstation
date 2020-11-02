@@ -1,0 +1,22 @@
+- name: "Manage system Packages"
+  package:
+    name: "{{ wtd_ws_system_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_system_packages"
+  tags:
+    - "system"
+    - "package"
+
+- name: "Manage system Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_system_flatpaks }}"
+  when:
+    - "wtd_ws_system_flatpaks"
+  tags:
+    - "system"
+    - "flatpak"

@@ -1,0 +1,8 @@
+---
+# defaults file for virt_guest
+
+wtd_vg_package_name:
+  - "virtualbox-guest-additions"
+  - "qemu-guest-agents"
+  - "open-vm-tools"
+wtd_vg_package_state: "absent"

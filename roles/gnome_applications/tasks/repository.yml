@@ -1,0 +1,13 @@
+---
+- name: "Manage flathub Repository"
+  flatpak_remote:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+    flatpakrepo_url: "{{ item.url }}"
+    method: "{{ item.method }}"
+  become: true
+  loop: "{{ wtd_ws_flatpak_repositories }}"
+  tags:
+    - "gnome"
+    - "package"
+    - "repository"

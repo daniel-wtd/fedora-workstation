@@ -1,0 +1,49 @@
+- name: "Manage productivity Packages"
+  package:
+    name: "{{ wtd_ws_productivity_private_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_productivity_private_packages"
+    - "wtd_ws_productivity_taste == 'private'"
+  tags:
+    - "productivity"
+    - "package"
+
+- name: "Manage productivity Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_productivity_private_flatpaks }}"
+  when:
+    - "wtd_ws_productivity_private_flatpaks"
+    - "wtd_ws_productivity_taste == 'private'"
+  tags:
+    - "productivity"
+    - "flatpak"
+
+- name: "Manage productivity Packages"
+  package:
+    name: "{{ wtd_ws_productivity_enterprise_packages }}"
+    state: "present"
+  become: true
+  when:
+    - "wtd_ws_productivity_enterprise_packages"
+    - "wtd_ws_productivity_taste == 'enterprise'"
+  tags:
+    - "productivity"
+    - "package"
+
+- name: "Manage productivity Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_productivity_enterprise_flatpaks }}"
+  when:
+    - "wtd_ws_productivity_enterprise_flatpaks"
+    - "wtd_ws_productivity_taste == 'enterprise'"
+  tags:
+    - "productivity"
+    - "flatpak"

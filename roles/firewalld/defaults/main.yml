@@ -1,0 +1,17 @@
+---
+# defaults file for firewalld
+
+## Package Management
+
+wtd_firewalld_package_name: "firewalld"
+wtd_firewalld_package_state: "present"
+
+## Configuration Management
+
+## Service Management
+
+wtd_firewalld_service_name: "firewalld.service"
+wtd_firewalld_service_state: "started"
+wtd_firewalld_service_enabled: "true"
+
+## Firewall Management

@@ -1,0 +1,21 @@
+---
+# tasks file for tuned
+
+- name: "Manage tuned Package"
+  package:
+    name: "{{ wtd_tuned_package_name }}"
+    state: "{{ wtd_tuned_package_state }}"
+  become: true
+  tags:
+    - "tuned"
+    - "package"
+
+- name: "Manage tuned Service"
+  service:
+    name: "{{ wtd_tuned_service_name }}"
+    state: "{{ wtd_tuned_service_state }}"
+    enabled: "{{ wtd_tuned_service_enabled }}"
+  become: true
+  tags:
+    - "tuned"
+    - "service"
