@@ -85,7 +85,7 @@
 - name: "Power - Sleep AC"
   dconf:
     key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-type"
-    value: "'nothing'"
+    value: "'suspend'"
     state: "present"
   tags:
     - "gnome"
@@ -95,7 +95,7 @@
 - name: "Power - Sleep AC Timeout"
   dconf:
     key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-timeout"
-    value: "1.800"
+    value: "1800"
     state: "present"
   tags:
     - "gnome"

@@ -5,15 +5,27 @@
     key: "/org/gnome/desktop/peripherals/touchpad/natural-scroll"
     value: "false"
     state: "present"
+  tags:
+    - "gnome"
+    - "peripherals"
+    - "configuration"
 
 - name: "Touchpad - Tap to Click"
   dconf:
     key: "/org/gnome/desktop/peripherals/touchpad/tap-to-click"
     value: "true"
     state: "present"
+  tags:
+    - "gnome"
+    - "peripherals"
+    - "configuration"
 
 - name: "Sound - Volume above 100%"
   dconf:
     key: "/org/gnome/desktop/sound/allow-volume-above-100-percent"
     value: "true"
     state: "present"
+  tags:
+    - "gnome"
+    - "peripherals"
+    - "configuration"

@@ -11,9 +11,45 @@
     - "package"
     - "dependency"
 
+- name: "Include shell tasks"
+  include_tasks: "shell.yml"
+  tags:
+    - "gnome"
+    - "configuration"
+    - "shell"
+    - "package"
+
 - name: "Include desktop tasks"
-  include_tasks: "gnome-desktop.yml"
+  include_tasks: "desktop.yml"
   tags:
     - "gnome"
     - "desktop"
+    - "configuration"
+    
+- name: "Include display tasks"
+  include_tasks: "display.yml"
+  tags:
+    - "gnome"
+    - "display"
+    - "configuration"
+    
+- name: "Include keybinding tasks"
+  include_tasks: "keybinding.yml"
+  tags:
+    - "gnome"
+    - "keybinding"
+    - "configuration"
+
+- name: "Include peripherals tasks"
+  include_tasks: "peripherals.yml"
+  tags:
+    - "gnome"
+    - "peripherals"
+    - "configuration"
+
+- name: "Include privacy tasks"
+  include_tasks: "privacy.yml"
+  tags:
+    - "gnome"
+    - "privacy"
     - "configuration"
