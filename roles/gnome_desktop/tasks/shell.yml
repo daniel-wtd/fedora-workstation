@@ -2,10 +2,11 @@
 
 - name: "Gnome Classic Session"
   package:
-    name: "{{ wtd_gd_gnome_classic_package_name }}"
-    state: "{{ wtd_gd_gnome_classic_package_state }}"
+    name: "{{ wtd_gd_classic_package_name }}"
+    state: "{{ wtd_gd_classic_package_state }}"
   become: true
   tags:
     - "gnome"
+    - "extension"
     - "shell"
     - "package"

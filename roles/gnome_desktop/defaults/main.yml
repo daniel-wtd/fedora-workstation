@@ -1,8 +1,25 @@
 ---
 # defaults file for gnome_desktop
 
-wtd_gd_gnome_classic_package_name:
+wtd_gd_classic_package_name:
   - "gnome-classic-session"
-  - "gnome-shell-extension-common"
+  - "gnome-shell-extension-apps-menu"
   - "gnome-shell-extension-background-logo"
-wtd_gd_gnome_classic_package_state: "absent"
+  - "gnome-shell-extension-common"
+  - "gnome-shell-extension-horizontal-workspaces"
+  - "gnome-shell-extension-launch-new-instance"
+  - "gnome-shell-extension-places-menu"
+  - "gnome-shell-extension-user-themes"
+  - "gnome-shell-extension-window-list"
+wtd_gd_classic_package_state: "absent"
+
+wtd_gd_extension_package_name:
+  - ""
+wtd_gd_extension_package_state: "present"
+wtd_gd_extensions:
+  - id: 307
+  - id: 3681
+  - id: 36
+  - id: 1125
+  - id: 1852
+  - id: 906

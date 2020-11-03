@@ -3,7 +3,8 @@
 
 - name: "Manage dependencies"
   package:
-    name: "python-psutil"
+    name:
+      - "python-psutil"
     state: "present"
   become: true
   tags:
@@ -11,44 +12,58 @@
     - "package"
     - "dependency"
 
-- name: "Include shell tasks"
+- name: "Include shell Tasks"
   include_tasks: "shell.yml"
   tags:
     - "gnome"
+    - "dconf"
+    - "extension"
     - "shell"
     - "package"
 
-- name: "Include desktop tasks"
+- name: "Include desktop Tasks"
   include_tasks: "desktop.yml"
   tags:
     - "gnome"
+    - "dconf"
     - "desktop"
     - "configuration"
     
-- name: "Include display tasks"
+- name: "Include display Tasks"
   include_tasks: "display.yml"
   tags:
     - "gnome"
+    - "dconf"
     - "display"
     - "configuration"
     
-- name: "Include keybinding tasks"
+- name: "Include keybinding Tasks"
   include_tasks: "keybinding.yml"
   tags:
     - "gnome"
+    - "dconf"
     - "keybinding"
     - "configuration"
 
-- name: "Include peripherals tasks"
+- name: "Include peripherals Tasks"
   include_tasks: "peripherals.yml"
   tags:
     - "gnome"
+    - "dconf"
     - "peripherals"
     - "configuration"
 
-- name: "Include privacy tasks"
+- name: "Include privacy Tasks"
   include_tasks: "privacy.yml"
   tags:
     - "gnome"
+    - "dconf"
     - "privacy"
     - "configuration"
+    
+- name: "Include extension Tasks"
+  include_tasks: "extension.yml"
+  tags:
+    - "gnome"
+    - "extension"
+    - "information"

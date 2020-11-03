@@ -7,6 +7,7 @@
     state: "present"
   tags:
     - "gnome"
+    - "dconf"
     - "privacy"
     - "configuration"
 
@@ -17,5 +18,6 @@
     state: "present"
   tags:
     - "gnome"
+    - "dconf"
     - "privacy"
     - "configuration"

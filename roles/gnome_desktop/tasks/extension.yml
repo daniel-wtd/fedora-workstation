@@ -1,0 +1,34 @@
+---
+- name: "Get gnome shell Version"
+  shell:
+    cmd: "gnome-shell --version| cut -d ' ' -f 3"
+  register: "r_gnome_shell_version"
+  changed_when: false
+  tags:
+    - "gnome"
+    - "extension"
+    - "information"
+
+- name: "Get extension Information"
+  uri:
+    url: "https://extensions.gnome.org/extension-info/?pk={{ item.id }}&shell_version={{ r_gnome_shell_version.stdout }}"
+    return_content: true
+  register: "r_extensions_info"
+  loop: "{{ wtd_gd_extensions }}"
+  tags:
+    - "gnome"
+    - "extension"
+    - "information"
+
+- name: "Manage extension Packs"
+  command:
+    cmd: "gnome-extensions install https://extensions.gnome.org/{{ item.json.download_url }}"
+    creates: "{{ ansible_user_dir}}/.local/share/gnome-shell/extensions/{{ item.json.uuid }}"
+  loop: "{{ r_extensions_info.results }}"
+  loop_control:
+    label: "{{ item.json.pk }}"
+  notify:
+    - "Change Notify"
+  tags:
+    - "gnome"
+    - "extension"

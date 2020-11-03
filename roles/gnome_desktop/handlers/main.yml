@@ -5,3 +5,27 @@
   command:
     cmd: "dconf update"
   become: true
+  tags:
+    - "gnome"
+    - "gdm"
+    - "dconf"
+
+- name: "Notify User"
+  command:
+    cmd: "notify-send -u critical -i system-shutdown 'Gnome Shell Changed'
+          'Please logout and login or reboot to apply all pending changes.'"
+  changed_when: false
+  listen: "Change Notify"
+  tags:
+    - "gnome"
+    - "dconf"
+    - "extension"
+
+- name: "Notify Admin"
+  debug:
+    msg: "The Shell was changed. Please Logout / Login to apply all pending changes."
+  listen: "Change Notify"
+  tags:
+    - "gnome"
+    - "dconf"
+    - "extension"

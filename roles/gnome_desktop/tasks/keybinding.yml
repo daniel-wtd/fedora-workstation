@@ -7,6 +7,7 @@
     state: "present"
   tags:
     - "gnome"
+    - "dconf"
     - "keybinding"
     - "configuration"
 
@@ -17,6 +18,7 @@
     state: "present"
   tags:
     - "gnome"
+    - "dconf"
     - "keybinding"
     - "configuration"
 
@@ -27,6 +29,7 @@
     state: "present"
   tags:
     - "gnome"
+    - "dconf"
     - "keybinding"
     - "configuration"
 
@@ -37,5 +40,6 @@
     state: "present"
   tags:
     - "gnome"
+    - "dconf"
     - "keybinding"
     - "configuration"
