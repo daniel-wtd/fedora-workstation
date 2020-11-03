@@ -1,0 +1,21 @@
+---
+# tasks file for thermald
+
+- name: "Manage thermald Package"
+  package:
+    name: "{{ wtd_thermald_package_name }}"
+    state: "{{ wtd_thermald_package_state }}"
+  become: true
+  tags:
+    - "thermald"
+    - "package"
+
+- name: "Manage thermald Service"
+  service:
+    name: "{{ wtd_thermald_service_name }}"
+    state: "{{ wtd_thermald_service_state }}"
+    enabled: "{{ wtd_thermald_service_enabled }}"
+  become: true
+  tags:
+    - "thermald"
+    - "service"

@@ -17,9 +17,11 @@ wtd_gd_extension_package_name:
   - ""
 wtd_gd_extension_package_state: "present"
 wtd_gd_extensions:
-  - id: 307
-  - id: 3681
-  - id: 36
-  - id: 1125
-  - id: 1852
-  - id: 906
+  - id: 307 # Dash to Dock
+  - id: 36 # Lock Keys
+  - id: 1125 # Github Notifications
+  - id: 1852 # Game Mode
+  - id: 906 # Sound Input / Output Device Chooser
+  - id: 2182 # No Annoyance V2
+  - id: 2735 # Minimize Shelf
+#  - id: 3681 # Top Indicator App

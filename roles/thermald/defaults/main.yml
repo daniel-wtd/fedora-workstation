@@ -1,0 +1,13 @@
+---
+# defaults file for thermald
+
+## Package Management
+
+wtd_thermald_package_name: "thermald"
+wtd_thermald_package_name: "present"
+
+# Service Management
+
+wtd_thermald_service_name: "thermald"
+wtd_thermald_service_state: "started"
+wtd_thermald_service_enabled: true
