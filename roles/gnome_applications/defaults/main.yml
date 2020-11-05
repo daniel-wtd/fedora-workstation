@@ -32,6 +32,7 @@ wtd_ws_flatpak_repositories:
 
 wtd_ws_removal_packages:
   - "abrt"
+  - "abrt-libs"
   - "baobab"
   - "cheese"
   - "eog"
