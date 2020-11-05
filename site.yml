@@ -6,11 +6,15 @@
   roles:
 
     - role: "update"
+    - role: "selinux"
     - role: "misc"
     - role: "chrony"
+    - role: "firewalld"
+    - role: "thermald"
     - role: "tuned"
     - role: "podman"
     - role: "kvm"
-    - role: "firewalld"
     - role: "gnome_desktop"
     - role: "gnome_applications"
+    - role: "jetbrains"
+    # - role: "virt_guest"

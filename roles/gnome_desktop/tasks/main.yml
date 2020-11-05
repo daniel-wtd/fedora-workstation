@@ -9,6 +9,7 @@
   become: true
   tags:
     - "gnome"
+    - "dconf"
     - "package"
     - "dependency"
 
@@ -67,3 +68,10 @@
     - "gnome"
     - "extension"
     - "information"
+    
+# - name: "Include gdm Tasks"
+#   include_tasks: "gdm.yml"
+#   tags:
+#     - "gnome"
+#     - "gdm"
+#     - "information"

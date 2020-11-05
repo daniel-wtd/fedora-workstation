@@ -1,0 +1,9 @@
+---
+# defaults file for jetbrains
+
+wtd_jetbrains_toolbox_user: "{{ lookup('env', 'USER') }}"
+wtd_jetbrains_toolbox_state: "present"
+wtd_jetbrains_toolbox_name: "jetbrains-toolbox-1.18.7455.tar.gz"
+wtd_jetbrains_toolbox_url: "https://download.jetbrains.com/toolbox"
+wtd_jetbrain_toolbox_dest: "/home/{{ wtd_jetbrains_toolbox_user }}/.local/share/JetBrains/Toolbox"
+

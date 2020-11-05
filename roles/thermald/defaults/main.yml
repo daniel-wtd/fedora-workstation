@@ -4,7 +4,7 @@
 ## Package Management
 
 wtd_thermald_package_name: "thermald"
-wtd_thermald_package_name: "present"
+wtd_thermald_package_state: "present"
 
 # Service Management
 

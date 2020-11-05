@@ -1,2 +1,15 @@
 ---
 # defaults file for selinux
+
+## Package Management
+
+wtd_selinux_package_name:
+  - "libselinux"
+  - "libselinux-utils"
+  - "python3-libselinux"
+wtd_selinux_package_state: "present"
+
+## Configuration Management
+
+wtd_selinux_configuration_policy: "targeted"
+wtd_selinux_configuration_mode: "enforcing"
