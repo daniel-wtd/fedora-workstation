@@ -3,3 +3,13 @@
 
 wtd_misc_hostname: "{{ inventory_hostname }}"
 wtd_misc_timezone: "UTC"
+
+wtd_misc_package_name:
+  - "tmux"
+  - "git"
+  - "micro"
+  - "tree"
+  - "cheat"
+  - "cheat-bash-completion"
+
+wtd_misc_package_state: "present"

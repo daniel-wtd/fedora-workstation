@@ -1,0 +1,10 @@
+---
+
+- name: "Manage misc Package"
+  package:
+    name: "{{ wtd_misc_package_name }}"
+    state: "{{ wtd_misc_package_state }}"
+  become: true
+  tags:
+    - "misc"
+    - "package"
