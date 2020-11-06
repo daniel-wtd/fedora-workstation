@@ -75,44 +75,63 @@ wtd_ws_cloud_flatpaks:
 wtd_ws_communication_packages: []
 
 wtd_ws_communication_flatpaks:
-  - "org.gabmus.giara"
-  - "org.gabmus.gfeeds"
-  - "org.gnome.Polari"
-  - "uk.co.ibboard.cawbird"
+  - "org.gabmus.giara" # reddit
+  - "org.gabmus.gfeeds" # RSS
+  - "org.gnome.Polari" # IRC
+  - "uk.co.ibboard.cawbird" # twitter
+  - "com.github.bleakgrey.tootle" # mastodon
 
 ### Development
 
 wtd_ws_development_packages: []
 
 wtd_ws_development_flatpaks:
-  - "com.vscodium.codium"
-  - "io.atom.Atom"
-  - "net.bartkessels.getit"
-  - "org.gnome.gitg"
-  # - "org.small_tech.Gnomit"
-  # - "uk.co.mrbenshef.Boop-GTK"
+  - "com.vscodium.codium" # code editor
+  - "io.atom.Atom" # code editor
+  - "net.bartkessels.getit" # api tool
+  - "org.gnome.gitg" # git gtk tool
+  # - "org.small_tech.Gnomit" # commit message editor
+  # - "uk.co.mrbenshef.Boop-GTK" # hash / crypt calculator
 
 ### Games
 
 wtd_ws_gaming_packages: []
 
-wtd_ws_gaming_flatpaks:
-  - "com.mojang.Minecraft"
-  - "com.shatteredpixel.shatteredpixeldungeon"
+wtd_ws_gaming_gnome_flatpaks:
+  - "org.gnome.Aisleriot" # card game
+  - "org.gnome.Chess" # chess
+  - "org.gnome.Games" # emulator and library
+  - "org.gnome.Klotski" # push blicks around
+  - "org.gnome.Mahjongg"
+  - "org.gnome.Mines"
+  - "org.gnome.Sudoku" # Sudoku
+  - "org.gnome.SwellFoop" # kinda Tetris
+  - "org.gnome.TwentyFortyEight" # 2048
+  - "org.gnome.Quadrapassel" # Testris
+#  - "com.albiononline.AlbionOnline" # MMORPG
+#  - "com.github.Anuken.Mindustry" # Tower Defence
+
+wtd_ws_gaming_extra_flatpaks:
+  - "com.shatteredpixel.shatteredpixeldungeon" # rogue like
+  - "org.hedgewars.Hedgewars" # worms-like, turn based
+  # - "com.mojang.Minecraft" # minecraft
+  # - "com.play0ad.zeroad" # strategy game
+
+wtd_ws_gaming_store_flatpaks:
+  - "io.github.sharkwouter.Minigalaxy" # GOG Client
   - "com.valvesoftware.Steam"
-#  - "com.albiononline.AlbionOnline"
-#  - "com.github.Anuken.Mindustry"
 
 ### Multimedia
 
 wtd_ws_multimedia_packages: []
 
 wtd_ws_multimedia_flatpaks:
-  - "de.haeckerfelix.Shortwave"
-  - "org.gimp.GIMP"
-  - "org.gnome.Lollypop"
-  - "org.gnome.Shotwell"
-  - "org.gnome.Totem"
+  - "com.github.amikha1lov.RecApp" # screen recorder
+  - "de.haeckerfelix.Shortwave" # internet radio
+  - "org.gimp.GIMP" # graphic editor
+  - "org.gnome.Lollypop" # music
+  - "org.gnome.Shotwell" # picture manager
+  - "org.gnome.Totem" # video player
   # - "com.belmoussaoui.Obfuscate"
   # - "com.github.maoschanz.drawing"
   # - "com.github.taiko2k.avvie"
@@ -129,7 +148,7 @@ wtd_ws_productivity_taste: "private"
 wtd_ws_productivity_private_packages: []
 
 wtd_ws_productivity_private_flatpaks:
-  - "com.jgraph.drawio.desktop"
+  - "com.jgraph.drawio.desktop" # diagrams tool
   - "org.gnome.Calculator"
   - "org.gnome.Calendar"
   - "org.gnome.Contacts"
@@ -154,48 +173,50 @@ wtd_ws_productivity_enterprise_flatpaks:
 wtd_ws_security_packages: []
 
 wtd_ws_security_flatpaks:
-  - "org.gnome.PasswordSafe"
-  # - "org.gnome.seahorse.Application"
+  - "org.gnome.PasswordSafe" # keepass client
+  # - "org.gnome.seahorse.Application" # gnome keyring manager
 
 ### System
 
 wtd_ws_system_packages:
-  - "solaar"
-  - "libratbag-ratbagd"
+  - "solaar" # logitech unify manager
+  - "libratbag-ratbagd" # backend for piper (see below)
 
 wtd_ws_system_flatpaks:
   - "com.github.tchx84.Flatseal"
-  - "org.freedesktop.Piper"
-  # - "com.leinardi.gst"
-  # - "org.gnome.baobab"
+  - "org.freedesktop.Piper" # logitech mouse manager
+  # - "com.leinardi.gst" # gtk stress testing
+  # - "org.gnome.baobab" # disk usage analyzer
 
 ### Utilities
 
 wtd_ws_utilities_packages:
-  - "tilix"
-  - "tilix-nautilus"
+  - "tilix" # terminal
+  - "tilix-nautilus" # integration for nautilus
 
 wtd_ws_utilities_flatpaks:
-  - "com.github.gi_lom.dialect"
-  - "com.github.fabiocolacio.marker"
-  - "com.rafaelmardojai.Blanket"
-  - "de.haeckerfelix.Fragments"
-  - "org.gnome.Characters"
-  - "org.gnome.Cheese"
-  - "org.gnome.ColorViewer"
-  - "org.gnome.DejaDup"
-  - "org.gnome.Evince"
-  - "org.gnome.Extensions"
-  - "org.gnome.FileRoller"
+  - "org.gabmus.notorious" # notes with keyboard
+  - "com.github.gi_lom.dialect" # google translate
+  - "com.github.fabiocolacio.marker" # markdown editor
+  - "com.github.junrrein.PDFSlicer" # pdf slice/merge
+  - "com.rafaelmardojai.Blanket" # ambient noise
+  - "de.haeckerfelix.Fragments" # torrent
+  - "org.gnome.Characters" # character map
+  - "org.gnome.Cheese" # webcam
+  - "org.gnome.ColorViewer" # color profile viewer
+  - "org.gnome.DejaDup" # backup
+  - "org.gnome.Evince" # pdf/document viewer
+  - "org.gnome.Extensions" # manage extensions
+  - "org.gnome.FileRoller" # zip/tar/etc
   - "org.gnome.Firmware"
   - "org.gnome.FontManager"
   - "org.gnome.Maps"
   - "org.gnome.SoundRecorder"
   - "org.gnome.Weather"
   - "org.gnome.clocks"
-  - "org.gnome.eog"
-  - "org.gnome.gedit"
+  - "org.gnome.eog" # image preview
+  - "org.gnome.gedit" # editor
   - "org.gustavoperedo.FontDownloader"
-  # - "org.cvfosammmm.Setzer"
-  # - "org.gabmus.whatip"
-  # - "org.gnome.Logs"
+  # - "org.cvfosammmm.Setzer" # latex
+  # - "org.gabmus.whatip" # internal / external ip tool
+  # - "org.gnome.Logs" # journalctl for gnome

@@ -9,14 +9,38 @@
     - "gaming"
     - "package"
 
-- name: "Manage gaming Flatpaks"
+- name: "Manage gaming gnome Flatpaks"
   flatpak:
     name: "{{ item }}"
     state: "present"
   become: true
-  loop: "{{ wtd_ws_gaming_flatpaks }}"
+  loop: "{{ wtd_ws_gaming_gnome_flatpaks }}"
   when:
-    - "wtd_ws_gaming_flatpaks"
+    - "wtd_ws_gaming_gnome_flatpaks"
+  tags:
+    - "gaming"
+    - "flatpak"
+
+- name: "Manage gaming extra Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_gaming_extra_flatpaks }}"
+  when:
+    - "wtd_ws_gaming_extra_flatpaks"
+  tags:
+    - "gaming"
+    - "flatpak"
+
+- name: "Manage gaming store Flatpaks"
+  flatpak:
+    name: "{{ item }}"
+    state: "present"
+  become: true
+  loop: "{{ wtd_ws_gaming_store_flatpaks }}"
+  when:
+    - "wtd_ws_gaming_store_flatpaks"
   tags:
     - "gaming"
     - "flatpak"
