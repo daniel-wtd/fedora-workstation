@@ -36,9 +36,11 @@ wtd_ws_removal_packages:
   - "baobab"
   - "cheese"
   - "eog"
+  - "evince"
   - "file-roller"
   - "file-roller-nautilus"
   - "firefox"
+  - "gedit"
   - "gnome-boxes"
   - "gnome-calculator"
   - "gnome-calendar"
@@ -63,12 +65,14 @@ wtd_ws_removal_flatpaks: []
 
 ### Cloud
 
-wtd_ws_cloud_packages:
-  - "nextcloud-client"
-  - "nextcloud-client-nautilus"
+wtd_ws_cloud_packages: ""
 
 wtd_ws_cloud_flatpaks:
   - "org.mozilla.firefox"
+  - "com.nextcloud"
+  # - "com.dropbox.Client"
+  # - "org.sparkleshare.SparkleShare"
+  # - "io.github.liberodark.OpenDrive" # google drive
   
 ### Communication
 
@@ -79,7 +83,14 @@ wtd_ws_communication_flatpaks:
   - "org.gabmus.gfeeds" # RSS
   - "org.gnome.Polari" # IRC
   - "uk.co.ibboard.cawbird" # twitter
-  - "com.github.bleakgrey.tootle" # mastodon
+  # - "com.discordapp.Discord"
+  # - "com.github.bleakgrey.tootle" # mastodon
+  # - "com.mattermost.Desktop"
+  # - "com.skype.Client"
+  # - "com.teamspeak.TeamSpeak"
+  # - "info.mumble.Mumble"
+  # - "org.jitsi.jitsi-meet"
+  # - "org.telegram.desktop"
 
 ### Development
 
@@ -89,7 +100,7 @@ wtd_ws_development_flatpaks:
   - "com.vscodium.codium" # code editor
   - "io.atom.Atom" # code editor
   - "net.bartkessels.getit" # api tool
-  - "org.gnome.gitg" # git gtk tool
+  # - "org.gnome.gitg" # git gtk tool
   # - "org.small_tech.Gnomit" # commit message editor
   # - "uk.co.mrbenshef.Boop-GTK" # hash / crypt calculator
 
@@ -126,7 +137,6 @@ wtd_ws_gaming_store_flatpaks:
 wtd_ws_multimedia_packages: []
 
 wtd_ws_multimedia_flatpaks:
-  - "com.github.amikha1lov.RecApp" # screen recorder
   - "de.haeckerfelix.Shortwave" # internet radio
   - "org.gimp.GIMP" # graphic editor
   - "org.gnome.Lollypop" # music
@@ -196,6 +206,7 @@ wtd_ws_utilities_packages:
 
 wtd_ws_utilities_flatpaks:
   - "org.gabmus.notorious" # notes with keyboard
+  - "com.github.amikha1lov.RecApp" # screen recorder
   - "com.github.gi_lom.dialect" # google translate
   - "com.github.fabiocolacio.marker" # markdown editor
   - "com.github.junrrein.PDFSlicer" # pdf slice/merge
@@ -208,8 +219,6 @@ wtd_ws_utilities_flatpaks:
   - "org.gnome.Evince" # pdf/document viewer
   - "org.gnome.Extensions" # manage extensions
   - "org.gnome.FileRoller" # zip/tar/etc
-  - "org.gnome.Firmware"
-  - "org.gnome.FontManager"
   - "org.gnome.Maps"
   - "org.gnome.SoundRecorder"
   - "org.gnome.Weather"
@@ -220,3 +229,5 @@ wtd_ws_utilities_flatpaks:
   # - "org.cvfosammmm.Setzer" # latex
   # - "org.gabmus.whatip" # internal / external ip tool
   # - "org.gnome.Logs" # journalctl for gnome
+  # - "org.gnome.Firmware"
+  # - "org.gnome.FontManager"

@@ -6,8 +6,6 @@
     name: "{{ wtd_update_package_name }}"
     state: "latest"
   become: true
-  notify:
-    - "Reboot System"
   tags:
     - "update"
     - "system"
